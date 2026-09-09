@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家庭关系问题-改善家庭沟通与相处的实用指南</title>
+    <meta name="description" content="深入探讨各类家庭关系问题，提供婆媳矛盾、亲子沟通、夫妻冲突等常见困扰的分析与改善建议，帮助您经营更和谐温暖的家庭关系。">
+    <meta name="keywords" content="家庭关系问题,婆媳关系,亲子沟通,夫妻矛盾,家庭矛盾处理,家庭和谐,关系改善">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            background: #faf8f5;
+            color: #333;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #4a6741;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #c08552;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #444;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+        nav ul li a:hover {
+            color: #4a6741;
+            border-bottom-color: #4a6741;
+        }
+        .nav-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #333;
+        }
+
+        /* Hero 首屏 */
+        .hero {
+            background: linear-gradient(135deg, #f0f4ed 0%, #e8efe4 50%, #f7efe6 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e2ddd5;
+        }
+        .hero h1 {
+            font-size: 42px;
+            color: #2c3e2e;
+            margin-bottom: 18px;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+        .hero p.sub {
+            font-size: 18px;
+            color: #5c6b5a;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .hero .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: #4a6741;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background: #3a5433;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74,103,65,0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #4a6741;
+            border: 2px solid #4a6741;
+        }
+        .btn-outline:hover {
+            background: #4a6741;
+            color: #fff;
+        }
+
+        /* 栏目区块通用 */
+        .section {
+            padding: 70px 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 32px;
+            color: #2c3e2e;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #c08552;
+            border-radius: 3px;
+        }
+        .section-title p {
+            color: #777;
+            margin-top: 12px;
+            font-size: 16px;
+        }
+
+        /* 常见问题分类卡片 */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .category-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 25px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            transition: all 0.3s;
+            border-top: 4px solid #4a6741;
+        }
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+        .category-card .icon {
+            font-size: 44px;
+            margin-bottom: 18px;
+        }
+        .category-card h3 {
+            font-size: 20px;
+            color: #2c3e2e;
+            margin-bottom: 12px;
+        }
+        .category-card p {
+            font-size: 14px;
+            color: #6b7a69;
+            margin-bottom: 15px;
+        }
+        .category-card a {
+            color: #c08552;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* 深度分析文章 */
+        .article-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .article-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.03);
+            transition: all 0.3s;
+            border-left: 4px solid transparent;
+        }
+        .article-card:hover {
+            border-left-color: #c08552;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+        .article-card .tag {
+            display: inline-block;
+            background: #f0f4ed;
+            color: #4a6741;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .article-card h3 {
+            font-size: 19px;
+            color: #2c3e2e;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .article-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* 实用建议区域 */
+        .tips-section {
+            background: #f0f4ed;
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .tip-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+        .tip-num {
+            background: #4a6741;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .tip-item h3 {
+            font-size: 17px;
+            color: #2c3e2e;
+            margin-bottom: 8px;
+        }
+        .tip-item p {
+            font-size: 14px;
+            color: #5a6a58;
+        }
+
+        /* 专家观点 */
+        .expert-quote {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.04);
+            margin-top: 30px;
+        }
+        .expert-quote blockquote {
+            font-size: 18px;
+            color: #444;
+            font-style: italic;
+            border-left: 4px solid #c08552;
+            padding-left: 25px;
+            line-height: 1.9;
+        }
+        .expert-quote .author {
+            margin-top: 20px;
+            font-weight: 600;
+            color: #4a6741;
+            text-align: right;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: #fff;
+        }
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 22px 0;
+        }
+        .faq-item summary {
+            font-size: 17px;
+            font-weight: 600;
+            color: #2c3e2e;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary::after {
+            content: "+";
+            font-size: 24px;
+            color: #4a6741;
+            transition: transform 0.3s;
+        }
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+        .faq-item .answer {
+            padding-top: 15px;
+            color: #666;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        /* 资源推荐 */
+        .resources {
+            background: #faf8f5;
+            padding: 70px 20px;
+        }
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .resource-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid #e8e2da;
+        }
+        .resource-card h3 {
+            color: #2c3e2e;
+            margin-bottom: 10px;
+        }
+        .resource-card p {
+            font-size: 14px;
+            color: #777;
+        }
+        .resource-card .btn {
+            margin-top: 15px;
+            padding: 8px 20px;
+            font-size: 13px;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #2c3e2e;
+            color: #d0d8cf;
+            padding: 50px 20px 20px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-content h4 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .footer-content ul {
+            list-style: none;
+        }
+        .footer-content ul li {
+            margin-bottom: 8px;
+        }
+        .footer-content ul li a {
+            color: #aab5a8;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer-content ul li a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid #3d523f;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #8a9a88;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+            .hero p.sub {
+                font-size: 16px;
+            }
+            .section {
+                padding: 50px 15px;
+            }
+            .section-title h2 {
+                font-size: 26px;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                gap: 15px;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            .nav-toggle {
+                display: block;
+            }
+            .article-list {
+                grid-template-columns: 1fr;
+            }
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            .expert-quote blockquote {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            .header-inner {
+                height: 60px;
+            }
+            .logo {
+                font-size: 20px;
+            }
+            .hero {
+                padding: 60px 15px;
+            }
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">心<span>家</span>网</a>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">家庭矛盾</a></li>
+                <li><a href="#">亲子沟通</a></li>
+                <li><a href="#">婆媳相处</a></li>
+                <li><a href="#">夫妻关系</a></li>
+                <li><a href="#">心理援助</a></li>
+            </ul>
+        </nav>
+        <button class="nav-toggle" id="navToggle">☰</button>
+    </div>
+</header>
+
+<main>
+    <!-- 首屏 -->
+    <section class="hero">
+        <div class="container">
+            <h1>家庭关系问题，从理解到和解</h1>
+            <p class="sub">当亲密变成伤害，当沟通变成争吵，我们为您提供专业的分析与温暖的解决方案。家庭关系问题不是一个人的事，让我们一起找到出口。</p>
+            <div class="cta-buttons">
+                <a href="#common-issues" class="btn btn-primary">常见家庭问题</a>
+                <a href="#advice" class="btn btn-outline">实用改善建议</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题分类 -->
+    <section class="section" id="common-issues">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见的家庭关系问题类型</h2>
+                <p>每个家庭都有独特的相处模式，但许多困境却是相通的</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="icon">👩‍👧</div>
+                    <h3>亲子沟通障碍</h3>
+                    <p>孩子不愿交流、沉迷手机、青春期叛逆……了解孩子行为背后的心理需求，重建信任桥梁。</p>
+                    <a href="#">了解详情 →</a>
+                </div>
+                <div class="category-card">
+                    <div class="icon">💑</div>
+                    <h3>夫妻矛盾冲突</h3>
+                    <p>因家务分工、经济压力或育儿观念分歧引发的争吵，如何打破恶性循环，找回亲密感？</p>
+                    <a href="#">了解详情 →</a>
+                </div>
+                <div class="category-card">
+                    <div class="icon">🍵</div>
+                    <h3>婆媳相处难题</h3>
+                    <p>生活习惯差异、育儿理念冲突、边界模糊——婆媳关系需要智慧，更需要方法。</p>
+                    <a href="#">了解详情 →</a>
+                </div>
+                <div class="category-card">
+                    <div class="icon">🏠</div>
+                    <h3>原生家庭影响</h3>
+                    <p>童年经历如何影响成年后的亲密关系？认识并疗愈那些看不见的伤痕。</p>
+                    <a href="#">了解详情 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 深度文章 -->
+    <section class="section" style="background:#fff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>深度解析：家庭关系问题背后的根源</h2>
+                <p>看见问题，是解决问题的第一步</p>
+            </div>
+            <div class="article-list">
+                <article class="article-card">
+                    <span class="tag">心理视角</span>
+                    <h3>为什么最亲近的人反而最容易伤害彼此？</h3>
+                    <p>家庭关系中存在一种特殊的情感张力：我们越是期待被理解，就越容易因落差而失望。这种心理机制往往源于对"家人就该懂我"的预设，以及沟通中习惯性的防御姿态。</p>
+                </article>
+                <article class="article-card">
+                    <span class="tag">沟通技巧</span>
+                    <h3>非暴力沟通：让家庭对话不再充满火药味</h3>
+                    <p>观察、感受、需要、请求——这四个步骤看似简单，却能有效减少指责和攻击性语言。当你说"我很担心"而不是"你总是这样"，对话的方向就会完全不同。</p>
+                </article>
+                <article class="article-card">
+                    <span class="tag">系统思维</span>
+                    <h3>家庭是一个系统：改变关系模式的三个关键</h3>
+                    <p>家庭关系问题极少是单方面的。当一个人改变应对方式，整个系统的互动模式都会随之变化。从自我觉察开始，逐步调整互动节奏，往往能带来意想不到的改善。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实用建议 -->
+    <section class="section tips-section" id="advice">
+        <div class="container">
+            <div class="section-title">
+                <h2>改善家庭关系的实用建议</h2>
+                <p>从今天就可以开始的小行动</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <div class="tip-num">1</div>
+                    <div>
+                        <h3>设立"家庭会议"时间</h3>
+                        <p>每周固定30分钟，不讨论具体冲突，只分享感受和需求。让每个人都有被倾听的机会。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-num">2</div>
+                    <div>
+                        <h3>练习"暂停-深呼吸-回应"</h3>
+                        <p>在情绪即将失控时，先离开现场片刻，深呼吸10次再决定是否回应。避免在应激状态下说出伤害性语言。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-num">3</div>
+                    <div>
+                        <h3>主动表达欣赏</h3>
+                        <p>每天至少对家人说一句具体的肯定，比如"谢谢你今天洗碗"。积极关注能改变关系氛围。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-num">4</div>
+                    <div>
+                        <h3>尊重彼此的边界</h3>
+                        <p>即使是家人，也需要个人空间。明确哪些话题、哪些物品、哪些时间是"我的"，并尊重对方的边界。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-num">5</div>
+                    <div>
+                        <h3>共同创造美好体验</h3>
+                        <p>一起做饭、散步或看一部电影。积极的共同经历是关系最好的润滑剂。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-num">6</div>
+                    <div>
+                        <h3>必要时寻求专业帮助</h3>
+                        <p>如果家庭冲突已严重影响到生活，请不要犹豫，寻求心理咨询师或家庭治疗师的帮助是成熟的选择。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专家观点 -->
+    <section class="section" style="background:#faf8f5;">
+        <div class="container">
+            <div class="expert-quote">
+                <blockquote>
+                    "家庭关系问题之所以复杂，是因为它交织着爱、期待、责任与伤害。但关键在于，家庭也是我们学习如何爱人、如何被爱的最初课堂。许多关系的裂痕并非不可修复，而是需要我们放下对'完美家庭'的执念，转而用心经营每一个真实的当下。"
+                </blockquote>
+                <p class="author">—— 家庭治疗视角的观察与思考</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于家庭关系问题的常见疑问</h2>
+                <p>这里或许有您正在寻找的答案</p>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>和父母总是因为小事争吵，该如何打破僵局？</summary>
+                    <div class="answer">
+                        首先尝试理解争吵背后通常有未被满足的情感需求，比如被尊重或关心的渴望。可以尝试在平静时与父母分享："我知道我们都很在乎对方，但每次争吵都让我很痛苦。我们可以试试换个方式沟通吗？"同时，适当调整自己的期待，接受父母可能无法完全改变，但您可以调整自己的反应方式。
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>面对婆媳矛盾，丈夫应该扮演什么角色？</summary>
+                    <div class="answer">
+                        丈夫在婆媳关系中扮演着关键的"桥梁"角色。他需要做到不偏袒任何一方，而是成为两方之间的翻译和缓冲。丈夫可以分别倾听母亲和妻子的感受，帮助双方理解彼此的立场，同时坚定地维护小家庭的边界。最重要的是，丈夫需要用行动让双方都感受到"我是被重视的"。
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>孩子进入青春期后拒绝沟通，家长该怎么办？</summary>
+                    <div class="answer">
+                        青春期孩子渴望独立，这时候家长需要调整沟通方式：减少说教和评判，多倾听和陪伴。可以尝试寻找孩子感兴趣的共同话题，比如音乐、运动等，在轻松的环境中建立连接。同时，尊重孩子的隐私，给予适度的空间。如果孩子长期封闭自我，也要考虑是否存在心理困扰，必要时寻求专业帮助。
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>夫妻经常因为教育孩子的方式不同而吵架，怎么解决？</summary>
+                    <div class="answer">
+                        这是非常常见的家庭冲突点。建议夫妻双方先私下达成一致，尽量不要在孩子面前争执。可以约定一个"教育讨论时间"，心平气和地分享各自的教育理念和担忧，寻找双方都能接受的折中方案。记住，你们的共同目标是一致的——都是为了孩子的健康成长。
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>原生家庭带来的伤害，真的可以疗愈吗？</summary>
+                    <div class="answer">
+                        疗愈是可能的，但需要一个过程。首先是通过自我觉察认识到过去的影响，然后是接纳自己的情绪和经历。很多人在阅读相关书籍、参加成长小组或接受心理咨询的过程中，逐渐理解父母当年的局限，并学会用更成熟的方式回应内心的伤痛。疗愈不是忘记，而是学会带着理解前行。
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资源推荐 -->
+    <section class="resources">
+        <div class="container">
+            <div class="section-title">
+                <h2>开始您的家庭关系改善之旅</h2>
+                <p>选择适合您的方式，迈出改变的第一步</p>
+            </div>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h3>📖 自我学习</h3>
+                    <p>阅读家庭关系与沟通类书籍，从认知层面理解问题。</p>
+                    <a href="#" class="btn btn-outline">查看书单</a>
+                </div>
+                <div class="resource-card">
+                    <h3>💬 在线咨询</h3>
+                    <p>与专业心理咨询师一对一交流，获得个性化指导。</p>
+                    <a href="#" class="btn btn-outline">了解流程</a>
+                </div>
+                <div class="resource-card">
+                    <h3>👨‍👩‍👧‍👦 家庭治疗</h3>
+                    <p>全家共同参与，在专业引导下重建健康的互动模式。</p>
+                    <a href="#" class="btn btn-outline">预约咨询</a>
+                </div>
+                <div class="resource-card">
+                    <h3>🌱 成长社群</h3>
+                    <p>与有相似经历的人交流分享，不再感到孤单。</p>
+                    <a href="#" class="btn btn-outline">加入社群</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div>
+                <h4>心家网</h4>
+                <p style="font-size:14px; color:#aab5a8; max-width:250px;">专注家庭关系领域的知识分享与支持平台，愿每个家庭都能找到和谐相处的密码。</p>
+            </div>
+            <div>
+                <h4>栏目导航</h4>
+                <ul>
+                    <li><a href="#">亲子沟通</a></li>
+                    <li><a href="#">夫妻关系</a></li>
+                    <li><a href="#">婆媳相处</a></li>
+                    <li><a href="#">原生家庭</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>支持与帮助</h4>
+                <ul>
+                    <li><a href="#">心理援助热线</a></li>
+                    <li><a href="#">咨询预约</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>版权声明</h4>
+                <p style="font-size:13px; color:#8a9a88;">本站内容仅供学习参考，不构成专业医疗或心理咨询建议。如遇严重困扰，请务必寻求专业机构帮助。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 心家网 xinjia.com 版权所有 | 用理解与爱，修复每一段关系
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 移动端导航切换
+    document.getElementById('navToggle').addEventListener('click', function() {
+        var menu = document.getElementById('nav-menu');
+        menu.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
